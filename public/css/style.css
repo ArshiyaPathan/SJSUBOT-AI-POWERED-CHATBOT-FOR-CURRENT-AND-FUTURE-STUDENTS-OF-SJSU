@@ -1,0 +1,491 @@
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+.page-header{
+	margin-top: 0;
+}
+
+footer{
+	margin-top: 40;
+}
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html {
+  height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", "Lucida Sans Typewriter", sans-serif;
+  font-weight: 300;
+  background: url(../images/Background.png) repeat;
+  background-size: cover;
+  color: #333;
+}
+footer {
+  font-size: 0.75em;
+  color: silver;
+  position: fixed;
+  bottom: 1em;
+  left: 1em;
+}
+footer a {
+  color: #f80;
+}
+header {
+  margin: 2em 0;
+  text-align: center;
+}
+h1, h2, h3 {
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+}
+h1 {
+  font-weight: 400;
+  font-size: 3em;
+}
+h2 {
+  font-weight: 300;
+  margin-top: 0.5em;
+}
+
+button {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 50%;
+  padding: .7em 1em;
+  margin: 4em auto 3em;
+  text-align: center;
+  color: #fff;
+  background: #1c747c;
+  box-shadow: 2px 5px 30px rgba(63, 200, 201, .4);
+  will-change: transform, filter;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+button .fa {
+  font-size: 30px;
+  line-height: 30px;
+  margin: 0;
+  text-shadow: 1px 2px 2px #2a8b90;
+}
+button:hover {
+  transform: scale(.92);
+}
+button:active {
+  filter: brightness(.8);
+}
+button:focus {
+  outline: 0;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 1.3em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-left: 10px;
+}
+.fa-github::before {
+    content: "\f09b";
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+.article-img {
+    float: left;
+    margin: 61px 0 0;
+    padding: 0;
+    width: calc(100% - 450px);
+}
+
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+
+.box {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(30%, -50%);
+}
+
+.sayhello {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-90%, -50%);
+}
+
+.chatbox {
+    width: 500px;
+    min-width: 390px;
+    height: 600px;
+    background: white;
+    padding: 25px;
+    margin: 0px auto 20px auto;
+    box-shadow: 0 3px #ccc;
+    border-radius: 0px 0px 10px 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px #333;
+}
+
+.chatlogs {
+    padding: 10px;
+    width: 100%;
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
+    /*background:rgba(200, 200, 200, .1);*/
+}
+
+/*Styling the scrolllbar*/
+.chatlogs::-webkit-scrollbar{
+    width: 10px;
+}
+
+.chatlogs::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: rgba(0, 0, 0, .1);
+}
+
+/*Commented out because i used a more general version below*/
+/*.chat .user-photo {
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+}*/
+
+.chat {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.chat .user-photo img{
+    width: 100%;
+}
+
+.chat .chat-message {
+    padding: 15px;
+    margin: 5px 10px 0;
+    /*border-radius: 10px;*/
+    font-size: 18px;
+}
+
+/*Commented out because i used a more general version below*/
+/*.chat .user-photo {
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+}*/
+
+.user-photo {
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.friend .chat-message {
+    color: black;
+    width: auto;
+    max-width: 70%;
+    background: rgb(229, 229, 234);
+    border-radius: 20px 20px 20px 0;
+}
+
+.self .chat-message {
+    color: white;
+    max-width: 80%;
+    width: auto;
+    margin: 5px 0 5px auto;
+    /*background: rgba(255, 153, 0, .7);*/
+    border-radius: 20px 20px 0px 20px;
+    background: rgb(64, 172, 246);
+    overflow-wrap: break-word;
+
+    /*order: -1;*/
+}
+
+.right {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+.headerBar{
+    /*border: 10px solid black;*/
+    font-size: 25px;
+    color: white;
+    padding: 25px;
+    width: 500px;
+    min-width: 390px;
+    height: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin: 20px auto 0px auto;
+    background: #1c747c;
+    border-radius: 10px 10px 0px 0px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px #333;
+}
+
+.headerBar .title {
+    margin: auto 20px;
+}
+
+.headerBar .user-photo {
+    margin: 0px 0px 0px 10px;
+
+}
+
+.headerBar .user-photo img{
+    width: 100%;
+}
+
+.chat-form {
+    margin-top: 20px;
+    display: flex;
+    width: 65;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+#inputDiv {
+    width: 75%;
+    margin-right: 15px;
+    
+}
+
+.chat-form textarea {
+    padding: 5px;
+    background: #fbfbfb;
+    width: 100%;
+    height: 65px;
+    border: 2px solid lightblue;
+    border-radius: 3px;
+    resize: none;
+    /*padding: 10px;*/
+    font-size: 18px;
+    color: #000;
+}
+
+.chat-form textarea:focus {
+    background: #fff;
+}
+
+#chat-form-buttons {
+    margin: auto;
+}
+
+/*.chat-form button {
+    height: 65px;
+    background: rgba(255, 153, 0, .7);;
+    padding: 5px 15px;
+    font-size: 30px;
+    color: white;
+    border: none;
+    margin: 0 10px;
+    border-radius: 3px;
+    box-shadow: 0 3px 0 rgba(255, 153, 0, .7);;
+    cursor: pointer;
+}*/
+
+.chat-form button:hover{
+    background: rgb(255, 153, 0);
+}
+
+.gif img {
+    margin: 10px;
+    border-radius: 20px;
+}
+
+
+.buttonResponse {
+    color: white;
+    max-width: 80%;
+    width: fit-content;
+    margin: 5px 0 5px auto;
+    /*background: rgba(255, 153, 0, .7);*/
+    border-radius: 20px 20px 0px 20px;
+    background: rgb(64, 172, 246);
+    overflow-wrap: break-word;
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px 20px;
+    float: left;
+    /*order: -1;*/
+}
+
+.buttonResponse:hover{
+        background: rgb(100, 200, 255);
+}
+/*
+#switchInputDiv {
+    position: fixed;
+    right: 580px;
+    padding-right: 10px;
+}*/
+
+
+#switchInputType{
+    width: 40px;
+    height: 40px;
+   
+}
+
+#rec {
+    width: 40px;
+    height: 40px;
+}
+
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+/*
+@-webkit-keyframes pulse {
+  from { opacity: 0; }
+  to { opacity: 0.5; }
+}
+
+::-webkit-scrollbar {
+    min-width: 12px;
+    width: 12px;
+    max-width: 12px;
+    min-height: 12px;
+    height: 12px;
+    max-height: 12px;
+    background: #e5e5e5;
+    box-shadow: inset 0px 50px 0px rgba(82,179,217,0.9), inset 0px -52px 0px #fafafa;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border: none;
+    border-radius: 100px;
+    border: solid 3px #e5e5e5;
+    box-shadow: inset 0px 0px 3px #999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b0b0b0;
+  box-shadow: inset 0px 0px 3px #888;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #aaa;
+  box-shadow: inset 0px 0px 3px #7f7f7f;
+}
+
+::-webkit-scrollbar-button {
+    display: block;
+    height: 26px;
+} 
+*/
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32.png">
+  </head>
+  <body>
+    <section class = "sayhello">
+       <div class="article-img fadeInLeft">
+        <img width="600" height="400" src="/images/sayhello.png"/> </a>
+      </div>
+    </section>
+    <section class = "box">
+      <div>
+       <a href="/"> <img src="/images/home.png"/></a>
+      </div>
+      <div class="headerBar">
+        <div class="user-photo"><img src="/images/bot-icon.png"></div>
+                <p class="title">SJSUBot</p>
+        </div>
+
+         <div class="chatbox">    
+            <div class="chatlogs">
+              <div class="chat"></div>
+              <div class="chatright"></div>
+            </div>    
+
+            <div class="chat-form">
+                <div id="inputDiv">
+                    <textarea class="input" placeholder="Type a message"></textarea>
+                </div>
+                <div id="chat-form-buttons"> 
+                    <button style = "margin-top: 6px; margin-left: 10px"><i class= "fa fa-microphone" ></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    var ButtonClicked = false;  
+    $("textarea").keypress(function(event) {
+    
+    // If the enter key is pressed
+      if(event.which === 13) {
+        // Ignore the default function of the enter key(Dont go to a new line)
+        event.preventDefault();
+        ButtonClicked = false;
+        // Call the method for sending a message, pass in the text from the user
+        send(this.value);
+        // Clear the text area
+        this.value = "";
+      }
+     });
+    </script>
+  </body>
+</html>

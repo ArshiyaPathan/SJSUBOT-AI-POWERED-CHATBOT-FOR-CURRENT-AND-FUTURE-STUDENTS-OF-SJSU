@@ -1,0 +1,54 @@
+<h2 class="page-header" style = "font: 400 30px Lato, sans-serif;">Register</h2>
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+<form method="post" action="/users/register" style = "font: 400 20px Lato, sans-serif;">
+<br>
+   <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" placeholder="Name" name="name">
+  </div>
+   <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control" placeholder="Email" name="email">
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control" placeholder="Password" name="password">
+  </div>
+   <div class="form-group">
+    <label>Student_ID</label>
+    <input type="text" class="form-control" placeholder="Student_ID" name="student_id">
+  </div>
+  <div class="form-group">
+    <label>Courses Completed</label>
+    <input type="text" class="form-control" placeholder="Current Enrolled Courses" name="courses_completed">
+  </div>
+  <div class="form-group">
+    <label>Courses Remaining</label>
+    <input type="text" class="form-control" placeholder="Remaining Courses" name="courses_remaining">
+  </div>
+    <div class="form-group">
+    <label>Current Credits</label>
+    <input type="text" class="form-control" placeholder="Credits Taken" name="credits">
+  </div>
+    <div class="form-group">
+    <label>Due Assignments</label>
+    <input type="text" class="form-control" placeholder="Due Assignments" name="due_assignments">
+  </div>
+    <div class="form-group">
+    <label>Due Fees</label>
+    <input type="text" class="form-control" placeholder="Due Fees" name="due_fees">
+  </div>
+    <div class="form-group">
+    <label>GPA</label>
+    <input type="text" class="form-control" placeholder="Current GPA" name="gpa">
+  </div>
+    <div class="form-group">
+    <label>Upcoming quizzes</label>
+    <input type="text" class="form-control" placeholder="Upcoming quizzes" name="upcoming_quizzes">
+  </div>
+  <button type="submit" class="btn btn-default" style ="width: 100px; margin-top: 20px">Submit</button>
+</form>
